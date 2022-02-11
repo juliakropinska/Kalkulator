@@ -1,0 +1,49 @@
+﻿<Window x:Class="ProstyKalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProstyKalkulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnZero" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Click="OnBtnNumberClick" />
+        <Button x:Name="btnOne" Grid.Row="3" Grid.Column="0" Content="1" Click="OnBtnNumberClick" />
+        <Button x:Name="btnTwo" Grid.Row="3" Grid.Column="1" Content="2" Click="OnBtnNumberClick" />
+        <Button x:Name="btnThree" Grid.Row="3" Grid.Column="2" Content="3" Click="OnBtnNumberClick" />
+        <Button x:Name="btnFour" Grid.Row="2" Grid.Column="0" Content="4" Click="OnBtnNumberClick" />
+        <Button x:Name="btnFive" Grid.Row="2" Grid.Column="1" Content="5" Click="OnBtnNumberClick" />
+        <Button x:Name="btnSix" Grid.Row="2" Grid.Column="2" Content="6" Click="OnBtnNumberClick" />
+        <Button x:Name="btnSeven" Grid.Row="1" Grid.Column="0" Content="7" Click="OnBtnNumberClick" />
+        <Button x:Name="btnEight" Grid.Row="1" Grid.Column="1" Content="8" Click="OnBtnNumberClick" />
+        <Button x:Name="btnNine" Grid.Row="1" Grid.Column="2" Content="9" Click="OnBtnNumberClick" />
+        <Button x:Name="btnDot" Grid.Row="4" Grid.Column="2" Content="," Click="OnBtnNumberClick"  />
+
+        <Button x:Name="btnDivision" Grid.Row="1" Grid.Column="3" Content="/" Click="OnBtnOperationClick" />
+        <Button x:Name="btnSubtraction" Grid.Row="2" Grid.Column="3" Content="-" Click="OnBtnOperationClick" />
+        <Button x:Name="btnMultiplication" Grid.Row="3" Grid.Column="3" Content="*" Click="OnBtnOperationClick" />
+        <Button x:Name="btnAdd" Grid.Row="1" Grid.Column="4" Grid.RowSpan="2" Content="+" Click="OnBtnOperationClick" />
+        <Button x:Name="btnResult" Grid.Row="3" Grid.Column="4" Grid.RowSpan="2" Content="=" Click="OnBtnResultClick" />
+
+        <Button x:Name="btnC" Grid.Row="4" Grid.Column="3" Content="C" Click="OnBtnClearClick" />
+
+
+        <TextBox x:Name="tbScreen" IsReadOnly="True" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" FontSize="40" ClipToBounds="True" BorderThickness="20,20,20,20"/>
+    </Grid>
+</Window>
